@@ -177,7 +177,19 @@ OSStatus extractIdentityAndTrust(NSString *certPath, NSString *pwd, SecIdentityR
 
     CFDictionaryRef optionsDictionary = CFDictionaryCreate(NULL, keys, values, 1, NULL, NULL);
     CFArrayRef items = CFArrayCreate(NULL, 0, 0, NULL);
-    securityError = SecPKCS12Import(inPKCS12Data, optionsDictionary, &items);
+    
+    if ( inPKCS12Data ) {
+        securityError = SecPKCS12Import(inPKCS12Data, optionsDictionary, &items);
+    } else {
+        securityError = noErr;
+    
+        // Clear app keychain
+        void (^deleteAllKeysForSecClass)(CFTypeRef) = ^(CFTypeRef secClass) {
+            id dict = @{(__bridge id)kSecClass: (__bridge id)secClass};
+            SecItemDelete((__bridge CFDictionaryRef) dict);
+        };
+        deleteAllKeysForSecClass(kSecClassIdentity);
+    }
 
     if (securityError == 0) {
         CFDictionaryRef myIdentityAndTrust = CFArrayGetValueAtIndex (items, 0);
