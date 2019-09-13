@@ -1,5 +1,6 @@
 # Cordova Client Certificate authentication support plugin
 
+
 Plugin that uses a client certificate for authentication, with special `myp12` file association as described below.
 
 This plugin uses iOS implementation and API based on: [`mwaylabs/cordova-plugin-client-certificate`](https://github.com/mwaylabs/cordova-plugin-client-certificate)
@@ -13,6 +14,10 @@ This plugin version is known to include code from the following other plugin ver
 - [`johannes-staehlin/cordova-client-cert-authentication`](https://github.com/johannes-staehlin/cordova-client-cert-authentication)
 
 **LICENSE:** Apache 2.0, with some code for iOS under [Apple MIT License](https://spdx.org/licenses/AML.html) (more detailed license statement below)
+
+# Note
+
+This is a fok from https://github.com/ccafix/cordova-plugin-client-certificate-support that adds Keychain sharing capabilities for IOS 11 and some null checks in the code
 
 ## About
 

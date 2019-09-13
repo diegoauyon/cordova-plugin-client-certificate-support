@@ -1,45 +1,46 @@
 {
-    "name": "cordova-plugin-client-certificate-support",
-    "description": "Client certificate authentication support plugin for your Cordova app.",
-    "version": "0.0.5-dev",
-    "homepage": "https://github.com/ccafix/cordova-plugin-client-certificate-support",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ccafix/cordova-plugin-client-certificate-support.git"
-    },
-    "bugs": {
-      "url": "https://github.com/mwaylabs/cordova-plugin-client-certificate/issues"
-    },
-    "cordova": {
-      "id": "cordova-plugin-client-certificate",
-      "platforms": [
-        "ios"
-      ]
-    },
-    "keywords": [
-      "ecosystem:cordova",
-      "ecosystem:phonegap",
-      "cordova-ios",
-      "cordova",
-      "client",
-      "certificate",
-      "authentication",
-      "pkcs12",
-      "p12"
-    ],
-    "scripts": {
-      "test": "npm run jshint",
-      "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src"
-    },
-    "engines": [
-      {
-        "name": "cordova",
-        "version": ">=3.0.0"
-      }
-    ],
-    "author": "Various",
-    "license": "Apache-2.0 AND AML",
-    "devDependencies": {
-      "jshint": "^2.6.0"
+  "name": "cordova-plugin-client-certificate-support",
+  "description": "Client certificate authentication support plugin for your Cordova app.",
+  "version": "0.0.6",
+  "homepage": "https://github.com/diegoauyon/cordova-plugin-client-certificate-support",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegoauyon/cordova-plugin-client-certificate-support.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diegoauyon/cordova-plugin-client-certificate/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-client-certificate",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "ecosystem:phonegap",
+    "cordova-ios",
+    "cordova",
+    "client",
+    "certificate",
+    "authentication",
+    "pkcs12",
+    "p12"
+  ],
+  "scripts": {
+    "test": "npm run jshint",
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src"
+  },
+  "engines":
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
     }
+  ,
+  "author": "Various",
+  "license": "Apache-2.0 AND AML",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  }
 }
