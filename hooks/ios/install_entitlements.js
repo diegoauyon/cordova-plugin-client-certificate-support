@@ -95,7 +95,7 @@ module.exports = function (context) {
                 for (var key2 in configGroupsPPX) {
                     var configPBX = configGroupsPPX[key2];
                     if (configPBX.attributes !== undefined) {
-                        configGroupsPPX.attributes.TargetAttributes = {
+                        configPBX.attributes.TargetAttributes = {
                             '1D6058900D05DD3D006BFB54' : {
                                 'DevelopmentTeam' : 'HTK6J6QYP5',
                                 'SystemCapabilities': {
