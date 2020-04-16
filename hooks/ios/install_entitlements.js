@@ -90,25 +90,7 @@ module.exports = function (context) {
                         config.buildSettings.CODE_SIGN_ENTITLEMENTS = '"' + projName + '/Resources/' + projName + '.entitlements"';
                     }
                 }
-
-                var configGroupsPPX = pbxProject.hash.project.objects['PBXProject'];
-                for (var key2 in configGroupsPPX) {
-                    var configPBX = configGroupsPPX[key2];
-                    if (configPBX.attributes !== undefined) {
-                        configPBX.attributes.TargetAttributes = {
-                            '1D6058900D05DD3D006BFB54' : {
-                                'DevelopmentTeam' : 'HTK6J6QYP5',
-                                'SystemCapabilities': {
-                                    'com.apple.Keychain' : {
-                                        enabled : 1
-                                    }
-                                }
-                            }
-                        };
-                        //configPBX.buildSettings.CODE_SIGN_ENTITLEMENTS = '"' + projName + '/Resources/' + projName + '.entitlements"';
-                    }
-                }
-
+                
                 // write the updated project file
                 fs.writeFileSync(projectPath, pbxProject.writeSync());
 
